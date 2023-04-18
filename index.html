@@ -1,0 +1,1880 @@
+<html>
+
+<head>
+    <title>
+        The Guide To Maths
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: grey;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="#home">Home</a>
+        <a class="active" href="#number">Number</a>
+        <a class="active" href="#geometry">Geometry</a>
+        <a class="active" href="#MASD">Measurement and Shape Dimensions</a>
+        <a class="active" href="#APCAV">Area, Perimeter, Circumference and Volume</a>
+        <a class="active" href="#FDAP">Fractions, Decimals and Percentages</a>
+        <a class="active" href="#ratios">Ratios</a>
+        <a class="active" href="#SDAT">Speed, Distance and Time</a>
+        <a class="active" href="#algebra">Algebra</a>
+        <a class="active" href="#coordinates">Coordinates</a>
+        <a class="active" href="#angles">Angles</a>
+        <a class="active" href="#DAG">Data and Graphs</a>
+        <a class="active" href="#chance">Chance</a>
+        <a class="active" href="#PV">Place Value</a>
+    </div>
+    <span id="Button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>
+<center>
+    <section id="home" class="page-header">
+        <h1 id="title" class="page-header text-capitalize">Welcome to the Guide to Maths.</h1>
+        <h3 id="infotitle">Here, you will find all the contents of The
+            Guide To Maths with explanations of each topic covered.</h3>
+
+        <h2> You can also visit my maths section on my other website. Here is the link: </h2>
+        <a href="https://gaja2710.github.io/Personal_Website/" target="_blank">Click to visit my Personal Website</a>
+
+    </section>
+    <section id="number" class="page-header">
+        <h1>Number</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#addition_1" id="addition_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Addition { + }<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="addition_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAdVBMVEX29vYAAAD+/v76+vpRUVHs7OyOjo78/Px2dnbz8/OVlZXOzs5MTEw+Pj5mZmanp6ciIiJ/f39fX1+ysrJubm4rKyvT09Oenp7IyMgZGRng4OC9vb1FRUVZWVkyMjLa2toLCwseHh4vLy+IiIgUFBSbm5vm5uYz1AixAAAFL0lEQVR4nO2d2WLiMAxFScJSoGUta1u6Tfn/TxwoRXEgxFJCY4ne8zIP4+noVLITiOU0GgAAAAAAALgkSdLZsfsjCR3KL5B04iydm7JM4nxuRfI0e7fmeCl/N+Po8dtPyNAhVsKXQPNp5AkaVixaYm5C8SSDjf7i7n4zWo02zfFw3rkBxazg0yTK8PbYN6/oxj8dRec8LDMpNocT/PY+x2/PwBll7qLhzLPlBb8dq7XdOnVm4GXBHa9W6zRNYb9QMIq2RuuUwm55BKNRYjKJaQqffYbRwGQSKeihVzCKngwmkQqvwRCM3g0upxTyF8cwGtorUzJ8YxmOzJUpFWnBtT4D3aJaKVNaSe+YhmNrZUpFl3e/ncfMquGWKRhFLWMT8Rhu8R2py9KWIS00C7bhwtZSQ4ZjtuHYqOGAbTgwavjCNnwxathkGzZhqAsYwlA/MIShfmAIQ/3AEIb6gSEM9QNDGOoHhjDUDwxhqB8YwlA/MIShfmAIQ/3AEIb6gaFKw0ObeSykhGHM/U++u96vZSc2q2IopHrPO7cLNJThniqSpbNXq2H5rcUV/Wo0LJfHSvVZu2EJx8oJjGs2lCpeQ7BmQ9lszPsBjW5LRvdSc+w59+KfnReiQPHUbdmbbNjR1sVm0lueRVpK8LTPXBWDTD84N4uZOTh8Dy3hYTZ1w2UtN+5lYv4RWoDBw1qo6AzntQ+Gx02jqEa5rWfh6UmSmI59DB23gDY/iWkK26GjFkGdtt71lAb6TgrQxpqZxHQhnYUOWcgDcyam18HQEYuhBbW4TMlwFTpgMdRqW1im4i5sTbA6wsVd2JpgdYSTob0idQ4uKDI8juF3YWuC0xF+HMLvwtYEoyOcFhp714o9dF9zeakhQ1t3bEfaAkOLS2kU3QkMLX2sSHmE4Z+qUpsrzaffkK6HNq8WnPNDjkOsffw9QMeiXRYkw27oYEuxZRjSnbf/qDyFxAzDEofn6IGOgCn6bEGG3gMdFULTsPCLGko0//QcNaRnGRZBE3EdOl4x6ZfChYbpt4n8Q56U0GUVqVOmCe/MQzVMeSl0kzgPHbOICcXtfUpKI+Np6KgFbNLMeB8+OQ9I7VwUZ11+CjMPEK1k8dmpPL9g5iHwq4nnM59OxOIH+XEvdPheHuZuvBzBE8Vu719ohyKa2e0mPMHTPV+d5VhpsU6G27iUYM62tu78adhry+jxfy8f4p89nPZbp0GKNu9Z3Lkn3J14he2ldRuK/K6jWKthmZ3QlnZBl93ObmUne4Xt+uV7Leo0rNhzUUGyFsOrvEcxKWn524adUG+JNNnZJQKGMNQPDGGoHxjCUD8whKF+YAhD/cAQhvqBIQz1A0MY6geGMNQPDGGoHxjCUD8whKF+YAhD/fyhN4/zjyOcGDXk97wz+sw1QYb8ToaeUUN+yw01noWOnckx3Fe24dqoYcI27BgzpHi5lwtaSssezF034qOKaBraWGgaaZlye97pH4QOnM0xYGbPO10N7RjSROStptSeZWUauv02nCSO7aXQKVPGTHxr2Euhm0T/fQ0d6GhnJd1DUXtvvxfp0NBBi3A634qnotOlbCqFmYbwoix+pcMszcJvHMXLtzZum3LogMW4HZqt/Eodu78GYzW6J9MNtj47DGbVznQqm6vRPXGGZNluHjv7Ry9f8+zfmhTMe9NJ0tqut63zFmOjgvkvc8nDrCC3kdiwIK/n3eAq6uJVNJ3AA8WOxhP4w8VG6VCdyr9BjuQt6f2wfxHmwe16r58EAAAAAAA3wn97z3rz23mcygAAAABJRU5ErkJggg==">
+                <h3 class="text-info">Addition
+                </h3>
+                <p class="page-header">Addition is when you add something together for example 2+2. If we have two
+                    figures
+                    like this. @ @ I
+                    currently have 2 figures. We must add two more of @ @. If we join together the two, the way to solve
+                    it
+                    will be like this. @ @ + @ @ = @ @ @ @. The answer is 4. With these ways of solving it, you can also
+                    try
+                    more sums like 3 + 9 or even 15 + 13. </p>
+                <h3>2 or more Digit Addition</h3>
+                <p class="page-header">You can also add with 2 digits. This is how you arrange it. For example, I have
+                    69 and 46.</p>
+                <div>
+                    <img src="Screenshot_(12).png">
+                    <p>First you have to add the numbers in the tens place. Currently the 2 numbers in the tens place is
+                        9 and 6. 9 + 6 = 15. You must put the five in the tens place and the one on top of the tens
+                        place like this:</p>
+                    <img src="Screenshot (14).png">
+                    <p>Now we need to add 1 + 6 + 4. The answer is 11. So the answer to this 2 digit addition is 115. 69
+                        + 46 = 115. With this, you can also even do 3 digit or 4 digit by using the same way of
+                        addition. </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#subtraction_1"
+            id="subtraction_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Subtraction { - }<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="subtraction_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Subtraction
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#multiplication_1"
+            id="multiplication_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Multiplication { x }<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="multiplication_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Multiplication
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#division_1" id="division_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Division { ÷ }<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="division_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Division
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#factors_1" id="factors_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Factors<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="factors_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Factors
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#multiples_1" id="multiples_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Multiples<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="multiples_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Multiples
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#BODMAS_1" id="BODMAS_head">
+            <span class="glyphicon glyphicon-star"></span>
+            BODMAS<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="BODMAS_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">BODMAS
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#square_root_1"
+            id="square_root_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Square Root<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="square_root_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Square root
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#square_1" id="square_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Square<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="square_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Square
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#cube_root_1" id="cube_root_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Cube Root<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="cube_root_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Cube Root
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#cube_1" id="cube_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Cube<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="cube_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Cube
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#LCM_1" id="LCM_head">
+            <span class="glyphicon glyphicon-star"></span>
+            LCM<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="LCM_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">LCM
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#HCF_1" id="HCF_head">
+            <span class="glyphicon glyphicon-star"></span>
+            HCF<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="HCF_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">HCF
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#prime_numbers_1"
+            id="prime_numbers_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Prime Numbers<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="prime_numbers_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Prime Numbers
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#composite_numbers_1"
+            id="composite_numbers_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Composite Numbers<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="composite_numbers_1" class="collapse">
+            <div class="movie-text">
+                <img class="img-responsive img-thumbnail" src="">
+                <h3 class="text-info">Composite Numbers
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_1"
+            id="how_to_apply_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="MASD" class="page-header">
+        <h1>Measurement and Shape Dimensions</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#millimetres_1"
+            id="millimetres_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Millimetres<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="millimetres_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Millimetres
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#centimetres_1"
+            id="centimetres_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Centimetres<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="centimetres_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Centimetres
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#metres_1" id="metres_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Metres<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="metres_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Metres
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#kilometres_1" id="kilometres_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Kilometres<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="kilometres_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Kilometres
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#length_1" id="length_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Length<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="length_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Length
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#width_1" id="width_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Width<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="width_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Width
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#depth_1" id="depth_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Depth<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="depth_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Depth
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#base_1" id="base_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Base<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="base_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Base
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#height_1" id="height_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Height<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="height_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Height
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_2"
+            id="how_to_apply_2_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_2" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="geometry" class="page-header">
+        <h1>Geometry</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#_2D_1" id="_2D_head">
+            <span class="glyphicon glyphicon-star"></span>
+            2D Shapes<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="_2D_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">2D Shapes
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#_3D_1" id="_3D_head">
+            <span class="glyphicon glyphicon-star"></span>
+            3D Shapes<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="_3D_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">3D Shapes
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#cross_sections_1"
+            id="cross_sections_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Cross Sections<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="cross_sections_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Cross Sections
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_3"
+            id="how_to_apply_3_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How To Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_3" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How To Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="APCAV" class="page-header">
+        <h1>Area, Perimeter, Circumference and Volume</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#area_of_a_square_1"
+            id="area_of_a_square_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Area of a Square<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="area_of_a_square_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Area of a Square
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#area_of_a_rectangle_1"
+            id="area_of_a_rectangle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Area of a Rectangle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="area_of_a_rectangle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Area of a Rectangle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#area_of_a_triangle_1"
+            id="area_of_a_triangle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Area of a Triangle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="area_of_a_triangle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Area of a Triangle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#area_of_a_circle_1"
+            id="area_of_a_circle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Area of a Circle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="area_of_a_circle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Area of a Circle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#circumference_of_a_circle_1"
+            id="circumference_of_a_circle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Circumference of a Circle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="circumference_of_a_circle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Circumference of a circle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#perimeter_of_a_square_1"
+            id="perimeter_of_a_square_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Perimeter of a Square<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="perimeter_of_a_square_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Perimeter of a Square
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#perimeter_of_a_rectangle_1"
+            id="perimeter_of_a_rectangle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Perimeter of a Rectangle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="perimeter_of_a_rectangle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Perimeter of a Rectangle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse"
+            data-target="#perimeter_of_a_equilateral_triangle_1" id="perimeter_of_a_equilateral_triangle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Perimeter of a equilateral triangle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="perimeter_of_a_equilateral_triangle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Perimeter_of_a_equilateral triangle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#perimeter_of_an_isosceles_1"
+            id="perimeter_of_an_isosceles_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Perimeter of an isosceles triangle
+            <i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="perimeter_of_an_isosceles_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Perimeter of an isosceles triangle
+
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#perimeter_of_a_scalene_triangle_1"
+            id="perimeter_of_a_scalene_triangle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Perimeter of a scalene triangle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="perimeter_of_a_scalene_triangle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Perimeter of a scalene triangle
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse"
+            data-target="#volume_of_a_rectangular_prism_and_a_cube_1"
+            id="volume_of_a_rectanglular_prism_and_a_cube_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Volume of a Rectangular Prism and a Cube<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="volume_of_a_rectangular_prism_and_a_cube_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Volume of a Rectanglular Prism and a Cube
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_4"
+            id="how_to_apply_4_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_4" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="FDAP" class="page-header">
+        <h1>Fractions, Decimals and Percentages</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#fractions_1" id="fractions_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Fractions<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="fractions_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Fractions
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#fractions_to_decimals_1"
+            id="fractions_to_decimals_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Fractions to Decimals<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="fractions_to_decimals_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Fractions to Decimals
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#fractions_to_percentages_1"
+            id="fractions_to_percentages_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Fractions to Percentages<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="fractions_to_percentages_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Fractions to Percentages
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#decimals_1" id="decimals_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Decimals<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="decimals_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Decimals
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#decimals_to_percentages_1"
+            id="decimals_to_percentages_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Decimals to Percentages<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="decimals_to_percentages_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Decimals to Percentages
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#percentages_1"
+            id="percentages_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Percentages<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="percentages_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Percentages
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_5"
+            id="how_to_apply_5_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_5" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="ratios" class="page-header">
+        <h1>Ratios</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#ratios_1" id="ratios_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Ratios<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="ratios_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Ratios
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_6"
+            id="how_to_apply_6_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_6" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="SDAT" class="page-header">
+        <h1>Speed, Distance and Time</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#speed_1" id="speed_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Speed<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="speed_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Speed
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#distance_1" id="distance_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Distance<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="distance_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Distance
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#time_1" id="time_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Time<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="time_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Time
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_7"
+            id="how_to_apply_7_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_7" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="algebra" class="page-header">
+        <h1>Algebra</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#algebra_1" id="algebra_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Algebra<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="algebra_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Algebra
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_8"
+            id="how_to_apply_8_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_8" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="coordinates" class="page-header">
+        <h1>Coordinates</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#x_axis_1" id="x_axis_head">
+            <span class="glyphicon glyphicon-star"></span>
+            x Axis<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="x_axis_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">x Axis
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#y_axis_1" id="y_axis_head">
+            <span class="glyphicon glyphicon-star"></span>
+            y Axis<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="y_axis_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">y Axis
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#z_axis_1" id="z_axis_head">
+            <span class="glyphicon glyphicon-star"></span>
+            z Axis<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="z_axis_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">z Axis
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#coordinate_plane_1"
+            id="coordinate_plane_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Coordinate Plane<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="coordinate_plane_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Coordinate Plane
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_9"
+            id="how_to_apply_9_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_9" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="angles" class="page-header">
+        <h1>Angles</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#acute_angle_1"
+            id="acute_angle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Acute Angle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="acute_angle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Acute Angle
+                </h3>
+                <p class="page-header">Acute Angles are angles which are less then 90°. This is any number in between 0
+                    and 90.</p>
+                <h3></h3>
+                <p class="page-header">You could have 45° or even 9°. Those are all Acute Angles. Anything less then
+                    90°.</p>
+                <div>
+                    <img src="https://images.twinkl.co.uk/tr/image/upload/illustation/Acute-Angle-KS2.png">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#right_angle_1"
+            id="right_angle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Right Angle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="right_angle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Right Angle
+                </h3>
+                <p class="page-header">Right Angles are 90°.They look like a quarter of a full square if you imagine the
+                    full square. </p>
+                <h3></h3>
+                <p class="page-header">Right Angles are everywhere. They can be seen in shape nets, containers, TV
+                    corners and many more. Try find some yourself.</p>
+                <div>
+                    <img
+                        src="https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Right_angle_fjh84m.jpg">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#obtuse_angle_1"
+            id="obtuse_angle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Obtuse Angle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="obtuse_angle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Obtuse Angle
+                </h3>
+                <p class="page-header">Obtuse Angles are any angles which are between 90°(not including 90) and 180°(not
+                    including 180).</p>
+                <h3></h3>
+                <p class="page-header">This can be 72° or 154°</p>
+                <div>
+                    <img src="https://images.twinkl.co.uk/tr/raw/upload/u/ux/obtuse-angle-big_ver_1.png">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#straight_angle_1"
+            id="straight_angle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Straight Angle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="straight_angle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Straight Angle
+                </h3>
+                <p class="page-header">Straight Angles are angles which are 180°. </p>
+                <h3></h3>
+                <p class="page-header">Straight Angles look life straight lines. That is why straight angles are called
+                    straight angles.</p>
+                <div>
+                    <img
+                        src="https://user-images.githubusercontent.com/17547686/31929586-4efbd912-b8a5-11e7-8f43-5d73cca6e2eb.png">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#reflex_angle_1"
+            id="reflex_angle_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Reflex Angle<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="reflex_angle_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Reflex Angle
+                </h3>
+                <p class="page-header">Reflex Angles are any angle between 180°(not including 180) and 360°(not
+                    including 360).</p>
+                <h3></h3>
+                <p class="page-header">This can be 340° or 234°. Any angle between 180° and 360° is a Reflex Angle</p>
+                <div>
+                    <img src="https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/reflex-angle-wiki_ver_1.png">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#angle_of_revolution_1"
+            id="angle_of_revolution_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Angle of Revolution<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="angle_of_revolution_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Angle of Revolution
+                </h3>
+                <p class="page-header">The Angle of Revolution is a angle which is 360°.</p>
+                <h3></h3>
+                <p class="page-header">The Angle of Revolution is the biggest possible angle. This is because the limit
+                    for a degrees is 360° . eg. Right Angles are 90°, Straight Angles are 180°. This means that the
+                    Angle of Revolution is the largest angle possible</p>
+                <div>
+                    <img
+                        src="https://www.geogebra.org/resource/sbm9d9cp/xV3Zpt5EYwKL6AeW/material-sbm9d9cp-thumb@l.png">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_10"
+            id="how_to_apply_10_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_10" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header">Angles are very imprtant to know. You can also label each vertices or edges of a
+                    angle any letter of the Alphabet. </p>
+                <h3></h3>
+                <p class="page-header">For example, I name the 3 vertices or edges N, I, O. If I want refer to that
+                    angle, I can say, this is angle NIO. For more information, visit the geometry or the measurement and
+                    shape dimensions section for more information</p>
+                <div>
+                    <p>Angles are used everywhere. When people in the olympics throw, they have a certain angle. You can
+                        also measure things. Carpenters will need to know angles. Angles are very important in daily
+                        life</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="DAG" class="page-header">
+        <h1>Data and Graphs</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#bar_graph_1" id="bar_graph_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Bar Graph<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="bar_graph_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Bar Graph
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#column_graph_1"
+            id="column_graph_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Column Graph<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="column_graph_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Column Graph
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#line_graph_1" id="line_graph_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Line Graph<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="line_graph_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Line Graph
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#pie_chart_and_graph_1"
+            id="pie_chart_and_graph_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Pie Chart/Graph<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="pie_chart_and_graph_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Pie Chart/Graph
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#picture_graph_1"
+            id="picture_graph_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Picture Graph<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="picture_graph_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Picture Graph
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#dot_plots_1" id="dot_plots_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Dot Plots<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="dot_plots_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Dot Plots
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse"
+            data-target="#collecting_data_and_presenting_it_1" id="collecting_data_and_presenting_it_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Collecting Data and Presenting It<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="collecting_data_and_presenting_it_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Collecting Data and Presenting it
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="chance" class="page-header">
+        <h1>Chance</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#chance_1" id="chance_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Chance<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="chance_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Chance
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_11"
+            id="how_to_apply_11_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_11" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="PV" class="page-header">
+        <h1>Place value</h1>
+        <div class="line"></div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#place_value_1"
+            id="place_value_head">
+            <span class="glyphicon glyphicon-star"></span>
+            Place Value<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="place_value_1" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">Place Value
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-primary text-capitalize" data-toggle="collapse" data-target="#how_to_apply_12"
+            id="how_to_apply_12_head">
+            <span class="glyphicon glyphicon-star"></span>
+            How to Apply<i style="font-size:24px" class="fa">&#xf0dd;</i>
+
+        </div>
+        <div id="how_to_apply_12" class="collapse">
+            <div class="movie-text">
+                <h3 class="text-info">How to Apply
+                </h3>
+                <p class="page-header"> </p>
+                <h3></h3>
+                <p class="page-header"></p>
+                <div>
+                    <img src="">
+                    <p></p>
+                    <img src="">
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</center>
+</body>
+
+</html>
